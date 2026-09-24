@@ -1,50 +1,184 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Lovely ❤️</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap');
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#171313;font-family:Cairo,sans-serif;color:#433a37}body{overflow-x:hidden}.app{width:min(100%,430px);min-height:100vh;margin:auto;background:#fbf0e8;position:relative;overflow:hidden;box-shadow:0 0 35px #0006}.page{min-height:100vh;padding:28px 22px 125px;display:none;position:relative}.page.show{display:block;animation:in .65s ease both}@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.tape{position:absolute;top:12px;left:50%;width:108px;height:30px;transform:translateX(-50%) rotate(-1deg);background:#e7d6c9cc;filter:blur(.1px)}
-.lock{min-height:100vh;display:flex;align-items:center;flex-direction:column;padding-top:105px}.envelope{width:84%;height:245px;background:#d8c1a4;position:relative;margin-bottom:72px;box-shadow:0 15px 25px #80675022}.env-back{position:absolute;inset:0;background:linear-gradient(32deg,transparent 49%,#f7eee4 50%) ,linear-gradient(148deg,transparent 49%,#f7eee4 50%);opacity:.95}.env-front{position:absolute;left:0;right:0;bottom:0;border-left:50% solid transparent;border-right:50% solid transparent;border-bottom:120px solid #c7ad8b;z-index:2}.letter{position:absolute;z-index:4;top:15px;left:17%;right:17%;height:78px;background:#fffaf4;box-shadow:0 2px 8px #6d51411c;text-align:center;padding-top:9px}.letter .tiny{font-size:12px;letter-spacing:5px}.letter .love{font-family:'Playfair Display',serif;font-size:22px;font-style:italic}.seal{position:absolute;z-index:5;left:50%;top:62%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:#a84c3f;border:4px solid #d6a46d;display:grid;place-items:center;color:#fff;font-size:27px;box-shadow:0 3px 8px #55302655}.star{position:absolute;right:18px;top:18px;background:#fff8ef;padding:9px 12px;color:#9f6c50}
-.secret{font-size:11px;letter-spacing:4px;margin-bottom:15px;color:#8e817b}.pass{width:75%;height:47px;border-radius:28px;border:1px solid #eadfd8;background:#fffdfb;text-align:center;font:inherit;outline:0}.unlock{margin-top:14px;border:0;background:#df5b55;color:#fff;border-radius:30px;padding:13px 42px;font:600 15px Cairo;box-shadow:0 9px 18px #b34d4935;cursor:pointer}.error{height:24px;font-size:12px;color:#b74e49;margin-top:8px}
-.paper{background:#fffdfa;min-height:calc(100vh - 155px);border:1px solid #f0e6df;box-shadow:0 6px 18px #9d7e6a18;padding:82px 30px 45px;position:relative}.paper:before{content:"";position:absolute;top:54px;left:15%;right:15%;border-top:1px dashed #eaded5}.emoji{font-size:42px;text-align:center;margin-bottom:45px}.type{font-size:24px;line-height:2.25;text-align:center;min-height:180px}.next{display:block;margin:35px auto 0;border:1px solid #d6afb0;background:#f5dce0;color:#332d2c;border-radius:35px;padding:14px 44px;font:italic 600 16px 'Playfair Display';cursor:pointer}.dots{margin-top:18px;text-align:center;color:#cdb8b0;letter-spacing:4px;font-size:12px}
-.galleryPage{background:#f1dfd4}.heading{text-align:center;padding:35px 0 20px}.heading h2{font-size:28px;margin:0;color:#5b4640}.heading p{margin:3px 0;color:#a88e85}.heartfield{position:absolute;inset:0;pointer-events:none;overflow:hidden}.heartfield span{position:absolute;color:#8f5b3f;font-size:25px;animation:drift 7s linear infinite}@keyframes drift{from{transform:translateY(30px) rotate(-10deg);opacity:.15}20%{opacity:.7}to{transform:translateY(-105vh) rotate(35deg);opacity:0}}
-.memories{display:grid;gap:18px}.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 20px #74574717;position:relative}.card img{width:100%;height:360px;object-fit:cover;display:block;filter:saturate(.88)}.card .caption{padding:14px;text-align:center;font-size:16px}.card.big img{height:510px}.sectionBtn{display:block;margin:25px auto 0;border:0;background:#f4cad4;color:#654d4b;border-radius:30px;padding:12px 35px;font:600 15px Cairo;cursor:pointer}
-.finalBox{margin-top:25px;background:#fffdf9;border-radius:26px;padding:48px 35px;box-shadow:0 8px 20px #74574718;text-align:center;line-height:2.4;font-size:20px}.finalBox .bigheart{font-size:50px;margin-bottom:18px}.lovely{font-family:'Playfair Display',serif;color:#cf9aa0;font-size:30px;margin-top:25px}.back{position:fixed;bottom:94px;left:50%;transform:translateX(-50%);z-index:8;border:0;border-radius:30px;background:#f2cad2;color:#5e4946;padding:10px 26px;font:600 14px Cairo}
-.player{position:fixed;z-index:20;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 26px),404px);height:76px;background:#fffaf8f2;border:1px solid #ead9d1;border-radius:25px;box-shadow:0 10px 30px #6c514226;backdrop-filter:blur(10px);display:flex;align-items:center;gap:10px;padding:9px 12px}.disc{width:48px;height:48px;border-radius:50%;background:url('assets/memory2.jpg') center/cover;flex:none}.ctrl{width:32px;height:32px;border:0;border-radius:50%;background:#f0cbd1;color:#594b48;cursor:pointer}.info{flex:1;min-width:0;text-align:right}.info b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.info small{display:block;color:#ad9690;font-size:10px}.bar{height:4px;border-radius:4px;background:#e7d7d0;margin-top:5px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:#df9fa9}.time{font-size:9px;color:#b8a29b;white-space:nowrap}
-.toast{position:fixed;z-index:50;top:25px;left:50%;transform:translateX(-50%) translateY(-80px);background:#fffaf7;color:#624c47;border-radius:30px;padding:10px 20px;box-shadow:0 8px 25px #0002;transition:.4s;font-size:12px}.toast.on{transform:translateX(-50%) translateY(0)}
-@media(max-width:360px){.type{font-size:20px}.envelope{height:210px}.card img{height:300px}.card.big img{height:430px}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Love • My Everything ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#fff7ef; --paper:#fffdf9; --pink:#f3d6dc; --rose:#c95762;
+      --rose2:#d96b73; --brown:#8c6258; --ink:#594744; --shadow:0 18px 50px rgba(126,77,65,.16);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#f0e4dc;color:var(--ink);font-family:Cairo,system-ui,sans-serif}
+    button,input{font:inherit}
+    .phone{min-height:100vh;display:flex;justify-content:center}
+    .app{width:min(100%,520px);min-height:100vh;background:var(--cream);position:relative;overflow:hidden}
+    .screen{min-height:100vh;padding:30px 22px 38px;display:none}
+    .screen.active{display:block;animation:fade .7s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+    /* Envelope */
+    .lock{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .tiny{letter-spacing:5px;font-size:11px;color:#9c8279;margin-bottom:8px}
+    .envelope{width:min(88%,390px);aspect-ratio:1.55/1;position:relative;margin:8px auto 38px;filter:drop-shadow(0 20px 20px rgba(104,71,60,.16))}
+    .env-body{position:absolute;inset:0;background:#d9c1a5;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(120,88,69,.12)}
+    .env-flap{position:absolute;inset:0;clip-path:polygon(0 0,50% 58%,100% 0);background:#efe1cd}
+    .env-left,.env-right{position:absolute;bottom:0;width:50%;height:70%;background:#cdb291}
+    .env-left{left:0;clip-path:polygon(0 100%,100% 0,0 0)}
+    .env-right{right:0;clip-path:polygon(100% 100%,100% 0,0 0)}
+    .seal{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#b94845;border:7px solid #e2bca8;display:grid;place-items:center;overflow:hidden;box-shadow:0 4px 12px rgba(80,40,30,.18)}
+    .seal img{width:100%;height:100%;object-fit:cover}
+    .label{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:66%;padding:9px 6px;background:#fff8ef;box-shadow:0 4px 8px rgba(80,40,30,.08)}
+    .label small{display:block;letter-spacing:5px;font-size:9px}
+    .label strong{font-family:Parisienne,cursive;font-size:24px;direction:ltr;display:block}
+    .label strong::after{content:" ❤️"}
+    .hint{font-size:10px;letter-spacing:4px;color:#9d8178;margin-bottom:12px}
+    .pass{width:min(82%,300px);padding:13px 18px;border:1px solid #eadbd1;border-radius:30px;background:#fffdfb;text-align:center;outline:none;box-shadow:0 3px 12px rgba(120,80,65,.07)}
+    .pass:focus{border-color:#d89aa0}
+    .unlock{margin-top:14px;border:0;border-radius:30px;padding:12px 34px;background:linear-gradient(135deg,#d95b62,#c53d3c);color:#fff;box-shadow:0 9px 20px rgba(190,68,67,.23);cursor:pointer}
+    .error{height:20px;color:#b84d52;font-size:12px;margin-top:8px}
+
+    /* Memory page */
+    .top{padding-top:12px;text-align:center}
+    .script{font-family:Parisienne,cursive;font-size:42px;direction:ltr}
+    .subtitle{font-size:12px;color:#a2867d;letter-spacing:2px}
+    .hero{margin:24px 0 18px;border-radius:25px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .hero img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+    .hero .veil{position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,rgba(255,247,239,.96))}
+    .heroText{position:absolute;bottom:20px;left:0;right:0;text-align:center}
+    .heroText h2{margin:0;font-size:24px;font-weight:600}
+    .heroText p{margin:2px 0 0;color:#a46c70;font-size:13px}
+
+    .sectionTitle{text-align:center;margin:26px 0 12px;font-size:15px}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(120,80,65,.09)}
+    .card img{width:100%;aspect-ratio:1/1.12;display:block;object-fit:cover}
+    .caption{padding:9px 10px 11px;text-align:center;font-size:12px}
+    .wide{grid-column:1/-1}
+    .wide img{aspect-ratio:16/10}
+
+    .player{margin-top:18px;padding:12px 14px;background:rgba(255,255,255,.82);border:1px solid #eadbd2;border-radius:24px;box-shadow:0 10px 24px rgba(120,80,65,.08)}
+    .track{display:flex;align-items:center;gap:10px}
+    .cover{width:48px;height:48px;border-radius:50%;object-fit:cover}
+    .meta{flex:1;min-width:0}
+    .song{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .artist{font-size:10px;color:#a1847b}
+    .play{width:42px;height:42px;border:0;border-radius:50%;background:#efccd2;color:#8d4f59;cursor:pointer}
+    .bar{height:4px;border-radius:4px;background:#ead9d4;margin-top:10px;overflow:hidden}
+    .fill{height:100%;width:0;background:#cb7379}
+    .time{display:flex;justify-content:space-between;font-size:9px;color:#a58b82;margin-top:4px;direction:ltr}
+
+    .footer{text-align:center;margin:28px 0 4px;color:#ad9188;font-size:10px;letter-spacing:2px}
+    .hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}
+    .heart{position:absolute;bottom:-30px;animation:float 5s linear forwards;opacity:.75}
+    @keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+  </style>
+</head>
 <body>
-<div class="app">
-<div id="toast" class="toast">💗</div>
-<section id="p0" class="page show"><div class="tape"></div><div class="lock">
- <div class="envelope"><div class="env-back"></div><div class="letter"><div class="tiny">LOVE</div><div class="love">my everything ❤️</div></div><div class="star">★</div><div class="seal">💗</div><div class="env-front"></div></div>
- <div class="secret">ENTER THE SECRET WORD</div><input id="pass" class="pass" value="love"><button class="unlock" onclick="unlock()">💗 Unlock 💗</button><div id="err" class="error"></div>
- </div></section>
-<section id="p1" class="page"><div class="tape"></div><div class="paper"><div class="emoji">😍</div><div id="type" class="type"></div><button class="next" onclick="go(2)">next →</button><div class="dots">•　1 / 2　••••••</div></div></section>
-<section id="p2" class="page galleryPage"><div class="heartfield" id="hearts"></div><div class="heading"><h2>بدايتنا 💕</h2><p>وأجمل ذكرياتنا مع بعض</p></div><div class="memories">
- <div class="card"><img src="assets/memory1.jpg"><div class="caption">بحبك ❤️</div></div>
- <div class="card big"><img src="assets/memory2.jpg"><div class="caption">ربنا يخليكي ليا 💗</div></div>
- <div class="card big"><img src="assets/memory3.jpg"><div class="caption">وجودك بيخلّي كل حاجة أحلى</div></div>
- <div class="card big"><img src="assets/memory4.jpg"><div class="caption">يوم متنسيش 😂❤️</div></div>
- </div><button class="sectionBtn" onclick="go(3)">memories 🔄</button></section>
-<section id="p3" class="page galleryPage"><div class="heartfield" id="hearts2"></div><div class="heading"><div style="font-size:42px">💖</div></div><div class="finalBox"><div class="bigheart">💗✨</div><div>بحبك أوي</div><div>ربنا يخليكي ليا</div><div>وعايزين بقا نمله صور كتير متنسيش 😂</div><div class="lovely">💗 Lovely 💗</div></div><button class="sectionBtn" onclick="go(2)">← memories</button></section>
-<div class="player"><div class="disc"></div><button class="ctrl" id="prev">‹</button><button class="ctrl" id="play" onclick="toggle()">▶</button><button class="ctrl" id="next">›</button><div class="info"><b>وانتِ معايا 😍</b><small id="songname">Our memory</small><div class="bar"><i id="prog"></i></div></div><div class="time" id="time">0:00</div></div>
-</div>
-<audio id="audio" src="assets/song.mp3" preload="auto"></audio>
+<div class="phone"><main class="app">
+
+  <section id="lockScreen" class="screen active">
+    <div class="lock">
+      <div class="tiny">LOVE</div>
+      <div class="envelope">
+        <div class="env-body"></div>
+        <div class="env-left"></div><div class="env-right"></div>
+        <div class="env-flap"></div>
+        <div class="label"><small>LOVE</small><strong>my everything</strong></div>
+        <div class="seal"><img src="assets/crop_14.jpg" alt=""></div>
+      </div>
+      <div class="hint">ENTER THE SECRET WORD</div>
+      <input id="password" class="pass" type="password" placeholder="love" autocomplete="off">
+      <button id="unlock" class="unlock">💕 Unlock 💕</button>
+      <div id="error" class="error"></div>
+    </div>
+  </section>
+
+  <section id="memoryScreen" class="screen">
+    <div class="top">
+      <div class="script">my love</div>
+      <div class="subtitle">a little place made with love ❤️</div>
+    </div>
+
+    <div class="hero">
+      <img src="assets/crop_30.jpg" alt="memory">
+      <div class="veil"></div>
+      <div class="heroText"><h2>بدناها 💕</h2><p>وأنت معايا 😍</p></div>
+    </div>
+
+    <div class="player">
+      <div class="track">
+        <img class="cover" src="assets/crop_38.jpg" alt="">
+        <div class="meta"><div class="song">وأنت معايا 😍</div><div class="artist">our little song</div></div>
+        <button id="play" class="play">▶</button>
+      </div>
+      <div class="bar"><div id="fill" class="fill"></div></div>
+      <div class="time"><span id="current">0:00</span><span id="duration">0:00</span></div>
+      <audio id="audio" preload="metadata" src="assets/song.mp3"></audio>
+    </div>
+
+    <h3 class="sectionTitle">فـاكرة الهدية دي 🥹💕</h3>
+    <div class="gallery">
+      <article class="card"><img src="assets/crop_38.jpg"><div class="caption">فـاكرة الهدية دي؟ 💗</div></article>
+      <article class="card"><img src="assets/crop_46.jpg"><div class="caption">أجمل الذكريات 🌹</div></article>
+      <article class="card wide"><img src="assets/crop_52.jpg"><div class="caption">كل تفصيلة هنا ليها حكاية ❤️</div></article>
+      <article class="card"><img src="assets/crop_22.jpg"><div class="caption">لحظة صغيرة، بس غالية</div></article>
+      <article class="card"><img src="assets/crop_14.jpg"><div class="caption">my everything 💕</div></article>
+    </div>
+
+    <div class="footer">MADE WITH LOVE • 2026</div>
+  </section>
+
+  <div class="hearts" id="hearts"></div>
+</main></div>
+
 <script>
-const pages=[...document.querySelectorAll('.page')],audio=document.getElementById('audio'),play=document.getElementById('play'),prog=document.getElementById('prog'),time=document.getElementById('time');
-const msg='حبيت أعمل هدية جديدة وعايزين نمله\nصورنا بقا بس قبل أي حاجة عايز تعرفي\nإني بحبك وربنا يخليكي ليا يا قلبي ويا ❤️';
-let typing;
-function go(n){pages.forEach((p,i)=>p.classList.toggle('show',i===n)); if(n===1)typeMsg(); if(n===2||n===3)spawnHearts(n===2?'hearts':'hearts2'); window.scrollTo({top:0,behavior:'smooth'});}
-function unlock(){if(document.getElementById('pass').value.trim().toLowerCase()==='love'){go(1);audio.play().catch(()=>{});toast('💗 Welcome');}else{document.getElementById('err').textContent='الكلمة السرية مش صحيحة';}}
-function typeMsg(){clearInterval(typing);let i=0,el=document.getElementById('type');el.innerHTML='';typing=setInterval(()=>{el.innerHTML=msg.slice(0,i).replaceAll('\n','<br>');i++;if(i>msg.length)clearInterval(typing)},42)}
-function toggle(){if(audio.paused){audio.play();play.textContent='Ⅱ'}else{audio.pause();play.textContent='▶'}}
-audio.addEventListener('timeupdate',()=>{if(audio.duration){prog.style.width=(audio.currentTime/audio.duration*100)+'%';let s=Math.floor(audio.currentTime);time.textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}});
-audio.addEventListener('play',()=>play.textContent='Ⅱ');audio.addEventListener('pause',()=>play.textContent='▶');
-function spawnHearts(id){const el=document.getElementById(id);if(el.dataset.done)return;el.dataset.done=1;for(let i=0;i<24;i++){let s=document.createElement('span');s.textContent=['♡','♥','🤎','💕'][i%4];s.style.left=Math.random()*100+'%';s.style.bottom=(-10-Math.random()*80)+'px';s.style.animationDelay=Math.random()*5+'s';s.style.animationDuration=(5+Math.random()*5)+'s';el.appendChild(s)}}
-function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('on');setTimeout(()=>x.classList.remove('on'),1800)}
-document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
-</script></body></html>
+const lock=document.getElementById('lockScreen');
+const memory=document.getElementById('memoryScreen');
+const pass=document.getElementById('password');
+const error=document.getElementById('error');
+const audio=document.getElementById('audio');
+const play=document.getElementById('play');
+const fill=document.getElementById('fill');
+const current=document.getElementById('current');
+const duration=document.getElementById('duration');
+
+function unlock(){
+  if(pass.value.trim().toLowerCase()==='love'){
+    lock.classList.remove('active'); memory.classList.add('active');
+    audio.play().catch(()=>{});
+    play.textContent='Ⅱ';
+    burst();
+  }else{
+    error.textContent='الكلمة السرية مش دي 💗';
+    pass.animate([{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:260});
+  }
+}
+document.getElementById('unlock').onclick=unlock;
+pass.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+
+play.onclick=()=>{
+  if(audio.paused){audio.play();play.textContent='Ⅱ'}else{audio.pause();play.textContent='▶'}
+};
+audio.addEventListener('loadedmetadata',()=>duration.textContent=fmt(audio.duration));
+audio.addEventListener('timeupdate',()=>{
+  current.textContent=fmt(audio.currentTime);
+  fill.style.width=(audio.currentTime/audio.duration*100||0)+'%';
+});
+audio.addEventListener('ended',()=>play.textContent='▶');
+function fmt(s){if(!isFinite(s))return'0:00';s=Math.floor(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function burst(){
+  const box=document.getElementById('hearts');
+  for(let i=0;i<18;i++){
+    const h=document.createElement('span'); h.className='heart'; h.textContent=['💗','💕','💖','💘'][i%4];
+    h.style.left=Math.random()*100+'%'; h.style.animationDelay=Math.random()*1.8+'s'; h.style.fontSize=(12+Math.random()*18)+'px';
+    box.appendChild(h); setTimeout(()=>h.remove(),6500);
+  }
+}
+</script>
+</body>
+</html>
